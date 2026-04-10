@@ -390,6 +390,7 @@ def list_faces(user):
     db = load_db()
     return jsonify({"faces": db.get("faces", [])})
 
+<<<<<<< HEAD
 
 @app.route("/api/admin/face/<face_id>", methods=["DELETE"])
 @auth_required(["admin"])
@@ -624,3 +625,8 @@ if __name__ == "__main__":
     ensure_dirs()
     load_db()
     app.run(host="0.0.0.0", port=5000, debug=True)
+=======
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
+    #backend
+>>>>>>> 974c054ea1f966ceec93411a2a16b1319d363bd1
